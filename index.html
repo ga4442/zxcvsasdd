@@ -30,6 +30,7 @@
     color: var(--foreground);
     -webkit-font-smoothing: antialiased;
   }
+  button { color: inherit; }
   /* 상단 바 */
   .top-bar {
     position: sticky; top: 0; z-index: 40;
@@ -198,7 +199,7 @@
   .money-row { display: flex; justify-content: space-between; align-items: center; gap: 12px; }
   .money-left { display: flex; align-items: center; gap: 12px; min-width: 0; }
   .money-rank { color: var(--primary); font-weight: 700; flex-shrink: 0; width: 20px; text-align: center; font-size: 15px; }
-  .money-name { font-weight: 700; font-size: 14px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; color: var(--fg); }
+  .money-name { font-weight: 700; font-size: 14px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; color: var(--fg); display: block; }
   @media (min-width: 640px) { .money-name { font-size: 16px; } }
   .money-right { display: flex; align-items: center; gap: 6px; flex-shrink: 0; }
   .money-amount { font-weight: 700; font-size: 14px; color: var(--fg); }
@@ -214,7 +215,7 @@
   .blind-row { display: flex; justify-content: space-between; align-items: center; gap: 12px; }
   .blind-left { display: flex; align-items: center; gap: 12px; min-width: 0; }
   .blind-rank { color: var(--primary); font-weight: 900; width: 20px; text-align: center; flex-shrink: 0; }
-  .blind-name { font-weight: 700; font-size: 14px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; color: var(--fg); }
+  .blind-name { font-weight: 700; font-size: 14px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; color: var(--fg); display: block; }
   @media (min-width: 640px) { .blind-name { font-size: 16px; } }
   .blind-right { display: flex; align-items: center; gap: 8px; flex-shrink: 0; }
   .blind-amount { font-weight: 700; font-size: 14px; color: var(--fg); }
@@ -606,32 +607,32 @@
     <h2 style="font-size:22px;font-weight:700;margin-bottom:32px;">돈이 가장 많이 묶인 곳</h2>
     <button class="money-item" onclick="openModal('money1')">
       <div class="money-row">
-        <div class="money-left"><span class="money-rank">1</span><p class="money-name">냉장보관장3</p></div>
-        <div class="money-right"><p class="money-amount">3,921,800원</p><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#2563eb" stroke-width="2"><path d="m6 9 6 6 6-6"/></svg></div>
+        <div class="money-left"><span class="money-rank">1</span><span class="money-name">냉장보관장3</span></div>
+        <div class="money-right"><span class="money-amount">3,921,800원</span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#2563eb" stroke-width="2"><path d="m6 9 6 6 6-6"/></svg></div>
       </div>
     </button>
     <button class="money-item" onclick="openModal('money2')">
       <div class="money-row">
-        <div class="money-left"><span class="money-rank">2</span><p class="money-name">조제실뒷장4-1</p></div>
-        <div class="money-right"><p class="money-amount">2,874,500원</p><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#2563eb" stroke-width="2"><path d="m6 9 6 6 6-6"/></svg></div>
+        <div class="money-left"><span class="money-rank">2</span><span class="money-name">조제실뒷장4-1</span></div>
+        <div class="money-right"><span class="money-amount">2,874,500원</span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#2563eb" stroke-width="2"><path d="m6 9 6 6 6-6"/></svg></div>
       </div>
     </button>
     <button class="money-item" onclick="openModal('money3')">
       <div class="money-row">
-        <div class="money-left"><span class="money-rank">3</span><p class="money-name">냉장보관장2</p></div>
-        <div class="money-right"><p class="money-amount">2,445,600원</p><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#2563eb" stroke-width="2"><path d="m6 9 6 6 6-6"/></svg></div>
+        <div class="money-left"><span class="money-rank">3</span><span class="money-name">냉장보관장2</span></div>
+        <div class="money-right"><span class="money-amount">2,445,600원</span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#2563eb" stroke-width="2"><path d="m6 9 6 6 6-6"/></svg></div>
       </div>
     </button>
     <button class="money-item" onclick="openModal('money4')">
       <div class="money-row">
-        <div class="money-left"><span class="money-rank">4</span><p class="money-name">조제실앞장2-4</p></div>
-        <div class="money-right"><p class="money-amount">2,512,300원</p><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#2563eb" stroke-width="2"><path d="m6 9 6 6 6-6"/></svg></div>
+        <div class="money-left"><span class="money-rank">4</span><span class="money-name">조제실앞장2-4</span></div>
+        <div class="money-right"><span class="money-amount">2,512,300원</span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#2563eb" stroke-width="2"><path d="m6 9 6 6 6-6"/></svg></div>
       </div>
     </button>
     <button class="money-item" onclick="openModal('money5')">
       <div class="money-row">
-        <div class="money-left"><span class="money-rank">5</span><p class="money-name">조제실뒷장3-2</p></div>
-        <div class="money-right"><p class="money-amount">1,734,900원</p><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#2563eb" stroke-width="2"><path d="m6 9 6 6 6-6"/></svg></div>
+        <div class="money-left"><span class="money-rank">5</span><span class="money-name">조제실뒷장3-2</span></div>
+        <div class="money-right"><span class="money-amount">1,734,900원</span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#2563eb" stroke-width="2"><path d="m6 9 6 6 6-6"/></svg></div>
       </div>
     </button>
   </section>
@@ -642,32 +643,32 @@
     <p class="section-desc">재고 중 <strong>1,842만 원 (234개 품목)</strong>은 현재 유효기간 정보가 비어있습니다. 이는 약국의 실수가 아니라 <span class="text-primary" style="font-weight:700;">자동 스캔이 불가능한 제품 고유의 특성</span> 때문이에요. <span class="text-primary" style="font-weight:700;">이 구역들만 날을 잡아 수동 입력</span>하시면 리스크 관리가 완벽해집니다.</p>
     <button class="blind-item" onclick="openModal('blind1')">
       <div class="blind-row">
-        <div class="blind-left"><span class="blind-rank">1</span><p class="blind-name">조제실앞장5-3</p></div>
-        <div class="blind-right"><div style="text-align:right;"><p class="blind-amount">1,874,600원</p><p class="blind-sub">8개 품목</p></div><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#2563eb" stroke-width="2"><path d="m6 9 6 6 6-6"/></svg></div>
+        <div class="blind-left"><span class="blind-rank">1</span><span class="blind-name">조제실앞장5-3</span></div>
+        <div class="blind-right"><div style="text-align:right;"><span class="blind-amount">1,874,600원</span><span class="blind-sub">8개 품목</span></div><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#2563eb" stroke-width="2"><path d="m6 9 6 6 6-6"/></svg></div>
       </div>
     </button>
     <button class="blind-item" onclick="openModal('blind2')">
       <div class="blind-row">
-        <div class="blind-left"><span class="blind-rank">2</span><p class="blind-name">조제실앞장2-4</p></div>
-        <div class="blind-right"><div style="text-align:right;"><p class="blind-amount">1,620,400원</p><p class="blind-sub">4개 품목</p></div><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#2563eb" stroke-width="2"><path d="m6 9 6 6 6-6"/></svg></div>
+        <div class="blind-left"><span class="blind-rank">2</span><span class="blind-name">조제실앞장2-4</span></div>
+        <div class="blind-right"><div style="text-align:right;"><span class="blind-amount">1,620,400원</span><span class="blind-sub">4개 품목</span></div><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#2563eb" stroke-width="2"><path d="m6 9 6 6 6-6"/></svg></div>
       </div>
     </button>
     <button class="blind-item" onclick="openModal('blind3')">
       <div class="blind-row">
-        <div class="blind-left"><span class="blind-rank">3</span><p class="blind-name">조제실뒷장6-4</p></div>
-        <div class="blind-right"><div style="text-align:right;"><p class="blind-amount">983,200원</p><p class="blind-sub">7개 품목</p></div><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#2563eb" stroke-width="2"><path d="m6 9 6 6 6-6"/></svg></div>
+        <div class="blind-left"><span class="blind-rank">3</span><span class="blind-name">조제실뒷장6-4</span></div>
+        <div class="blind-right"><div style="text-align:right;"><span class="blind-amount">983,200원</span><span class="blind-sub">7개 품목</span></div><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#2563eb" stroke-width="2"><path d="m6 9 6 6 6-6"/></svg></div>
       </div>
     </button>
     <button class="blind-item" onclick="openModal('blind4')">
       <div class="blind-row">
-        <div class="blind-left"><span class="blind-rank">4</span><p class="blind-name">서랍장(좌)2</p></div>
-        <div class="blind-right"><div style="text-align:right;"><p class="blind-amount">842,600원</p><p class="blind-sub">3개 품목</p></div><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#2563eb" stroke-width="2"><path d="m6 9 6 6 6-6"/></svg></div>
+        <div class="blind-left"><span class="blind-rank">4</span><span class="blind-name">서랍장(좌)2</span></div>
+        <div class="blind-right"><div style="text-align:right;"><span class="blind-amount">842,600원</span><span class="blind-sub">3개 품목</span></div><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#2563eb" stroke-width="2"><path d="m6 9 6 6 6-6"/></svg></div>
       </div>
     </button>
     <button class="blind-item" onclick="openModal('blind5')">
       <div class="blind-row">
-        <div class="blind-left"><span class="blind-rank">5</span><p class="blind-name">조제실앞장4-6</p></div>
-        <div class="blind-right"><div style="text-align:right;"><p class="blind-amount">694,100원</p><p class="blind-sub">12개 품목</p></div><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#2563eb" stroke-width="2"><path d="m6 9 6 6 6-6"/></svg></div>
+        <div class="blind-left"><span class="blind-rank">5</span><span class="blind-name">조제실앞장4-6</span></div>
+        <div class="blind-right"><div style="text-align:right;"><span class="blind-amount">694,100원</span><span class="blind-sub">12개 품목</span></div><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#2563eb" stroke-width="2"><path d="m6 9 6 6 6-6"/></svg></div>
       </div>
     </button>
   </section>
