@@ -192,32 +192,32 @@
     border: 1px solid var(--border); border-radius: 20px; padding: 16px 20px;
     background: var(--bg); cursor: pointer; text-align: left; width: 100%;
     transition: box-shadow 0.2s, border-color 0.2s, transform 0.2s; margin-bottom: 8px;
-    display: block;
+    display: block; color: var(--fg);
   }
   .money-item:hover { box-shadow: 0 4px 20px rgba(0,0,0,0.08); border-color: var(--primary); transform: translateY(-2px); }
   .money-row { display: flex; justify-content: space-between; align-items: center; gap: 12px; }
   .money-left { display: flex; align-items: center; gap: 12px; min-width: 0; }
   .money-rank { color: var(--primary); font-weight: 700; flex-shrink: 0; width: 20px; text-align: center; font-size: 15px; }
-  .money-name { font-weight: 700; font-size: 14px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+  .money-name { font-weight: 700; font-size: 14px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; color: var(--fg); }
   @media (min-width: 640px) { .money-name { font-size: 16px; } }
   .money-right { display: flex; align-items: center; gap: 6px; flex-shrink: 0; }
-  .money-amount { font-weight: 700; font-size: 14px; }
+  .money-amount { font-weight: 700; font-size: 14px; color: var(--fg); }
   @media (min-width: 640px) { .money-amount { font-size: 16px; } }
 
   /* 사각지대 리스트 */
   .blind-item {
     border: 1px solid var(--border); border-radius: 20px; padding: 16px 20px;
     background: var(--bg); cursor: pointer; text-align: left; width: 100%;
-    transition: box-shadow 0.2s, border-color 0.2s; margin-bottom: 8px; display: block;
+    transition: box-shadow 0.2s, border-color 0.2s; margin-bottom: 8px; display: block; color: var(--fg);
   }
   .blind-item:hover { box-shadow: 0 4px 20px rgba(0,0,0,0.08); border-color: var(--primary); }
   .blind-row { display: flex; justify-content: space-between; align-items: center; gap: 12px; }
   .blind-left { display: flex; align-items: center; gap: 12px; min-width: 0; }
   .blind-rank { color: var(--primary); font-weight: 900; width: 20px; text-align: center; flex-shrink: 0; }
-  .blind-name { font-weight: 700; font-size: 14px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+  .blind-name { font-weight: 700; font-size: 14px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; color: var(--fg); }
   @media (min-width: 640px) { .blind-name { font-size: 16px; } }
   .blind-right { display: flex; align-items: center; gap: 8px; flex-shrink: 0; }
-  .blind-amount { font-weight: 700; font-size: 14px; }
+  .blind-amount { font-weight: 700; font-size: 14px; color: var(--fg); }
   @media (min-width: 640px) { .blind-amount { font-size: 16px; } }
   .blind-sub { font-size: 11px; color: var(--muted-fg); }
 
@@ -1121,4 +1121,3 @@ document.querySelector('.download-btn').addEventListener('click', () => {
 </script>
 </body>
 </html>
-
